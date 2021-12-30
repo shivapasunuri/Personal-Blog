@@ -1,0 +1,12 @@
+<%- include("partials/header"); -%>
+    <% blogItems.forEach((post)=>{ %>
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p>
+            <%= post.content.substring(0,100)+" ..." %>
+                <a href="/posts/<%=post._id%>">Read more</a>
+        </p>
+        <% }) %>
+            <a href="/compose" class="btn btn-success composeLink">Compose</a>
+            <%- include("partials/footer"); -%>
